@@ -3,9 +3,11 @@ def convert(num, b):
     """Recursive function that returns a string representing num in the base b"""
 
     remainder = ''
+    finish = ''
 
     if num == 0:
-        return ''
+        finish += str(remainder)
+        return finish
 
     remainder = num % b
 
