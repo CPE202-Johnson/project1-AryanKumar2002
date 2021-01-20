@@ -1,14 +1,15 @@
 #(int, int) -> number in different base
 def convert(num, b):
     """Recursive function that returns a string representing num in the base b"""
+    if b < 17:
+        final = converter(num, b)
     
-    final = converter(num, b)
+        #Checking for special case when empty string is output
+        if final == '':
+            return '0'
     
-    #Checking for special case when empty string is output
-    if final == '':
-        return '0'
-    
-    return final
+        return final
+
     
 #(int, int) -> number in different base
 #Converts base recursively
